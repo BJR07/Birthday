@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#170f29">
+  <title>For My Sunshine ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <header class="navbar">
+    <a class="brand" href="#home">💗 For My Jaan ❤️</a>
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    <nav id="nav">
+      <a href="#home">Home</a><a href="#memories">Memories</a><a href="#letter">Letter</a>
+      <a href="#reasons">Reasons</a><a href="#gift">Gift</a><a href="#final">♡</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="sunflowers">🌻 🌻</div>
+      <div class="hero-copy">
+        <p class="eyebrow">A little universe made just for you</p>
+        <h1>Happy Birthday<br><span>My Sunshine</span> ♡</h1>
+        <p class="lead">You make my world brighter,<br>my days happier and my life better.</p>
+        <a class="button" href="#cake">Explore your surprise ✨</a>
+      </div>
+      <div class="moon">☾</div>
+      <div class="couple-silhouette">♡</div>
+      <a class="scroll-hint" href="#cake">scroll to begin ↓</a>
+    </section>
+
+    <section id="cake" class="section cake-section">
+      <p class="eyebrow">Your special day</p>
+      <h2>Make a wish, birthday girl!</h2>
+      <p class="subtext">Close your eyes, make a wish and blow out your candles ✨</p>
+      <div class="cake-wrap">
+        <div class="cake">
+          <div class="candles"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="icing">Happy Birthday<br>❤️</div>
+          <div class="cake-body"></div>
+          <div class="cake-plate"></div>
+        </div>
+      </div>
+      <button class="button" id="blowBtn">🕯️ Click to blow</button>
+      <p id="cakeMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <section id="memories" class="section">
+      <p class="eyebrow">Every little moment matters</p>
+      <h2>Our Little Universe ♡</h2>
+      <p class="subtext">A tiny collection of moments I want to keep forever.</p>
+      <div class="memory-grid">
+        <article class="memory-card"><div class="photo-placeholder photo-one">📷<small>Add your first photo</small></div><h3>The day we met</h3><p>One ordinary day became a favourite memory.</p></article>
+        <article class="memory-card"><div class="photo-placeholder photo-two">🌻<small>Add a favourite photo</small></div><h3>Our little things</h3><p>The talks, laughs and silly moments.</p></article>
+        <article class="memory-card"><div class="photo-placeholder photo-three">💗<small>Add another photo</small></div><h3>More memories ahead</h3><p>And this is only the beginning...</p></article>
+      </div>
+      <p class="hint">Tip: Replace these placeholders with your own photos in the assets folder.</p>
+    </section>
+
+    <section id="letter" class="section letter-section">
+      <p class="eyebrow">A note from my heart</p>
+      <h2>A little letter for you 💌</h2>
+      <button class="envelope" id="openLetter" aria-label="Open the love letter">
+        <span class="seal">♥</span><span>Tap to open your letter</span>
+      </button>
+      <article class="letter-paper" id="letterPaper">
+        <h3>My Dearest,</h3>
+        <p>Happy Birthday, my love! I hope today reminds you how special you are. Thank you for bringing so much happiness, laughter and warmth into my life.</p>
+        <p>I may not always find the perfect words, but I hope my efforts remind you that you are loved, appreciated and celebrated — today and every day.</p>
+        <p>May all your little dreams find their way to you. Keep smiling, keep shining and always be your wonderful self.</p>
+        <p class="signature">Always yours ♡</p>
+      </article>
+    </section>
+
+    <section id="reasons" class="section reasons-section">
+      <p class="eyebrow">A list that could go on forever</p>
+      <h2>Reasons Why I Love You ♡</h2>
+      <p class="subtext">A few reasons today. A million more tomorrow.</p>
+      <div class="reason-card"><span id="reasonNumber">Reason #1</span><p id="reasonText">You have the most adorable smile. 😍</p></div>
+      <div class="reason-controls"><button class="round-button" id="prevReason" aria-label="Previous reason">←</button><button class="round-button" id="nextReason" aria-label="Next reason">→</button></div>
+      <p class="hint">Tap the arrows for another reason.</p>
+    </section>
+
+    <section id="gift" class="section gift-section">
+      <p class="eyebrow">One last surprise</p>
+      <h2>Your Special Gift Box ✨</h2>
+      <p class="subtext">A little something wrapped with lots of love.</p>
+      <button class="gift-box" id="openGift" aria-label="Open gift box"><span class="gift-ribbon"></span><span class="gift-bow">🎀</span><span class="gift-heart">♥</span></button>
+      <p id="giftMessage" class="gift-message">Open your gift 🎁</p>
+    </section>
+
+    <section id="final" class="section final-section">
+      <div class="infinity">∞<span>♡</span></div>
+      <h2>Happy Birthday, My Love!</h2>
+      <p>Thank you for being you.<br>I'm so lucky to have you in my life.<br>I hope this year brings you endless happiness<br>and everything your heart wishes for.</p>
+      <strong>I Love You Forever ♡</strong>
+      <a class="button" href="#home">⌂ Back to home</a>
+    </section>
+  </main>
+  <footer>Made with endless love, just for you 🌻</footer>
+  <script src="script.js"></script>
+</body>
+</html>
