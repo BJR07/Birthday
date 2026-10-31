@@ -1,41 +1,55 @@
+// Mobile Navigation
 const nav = document.querySelector('#nav');
-document.querySelector('.menu-toggle').addEventListener('click', () => nav.classList.toggle('open'));
-nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+const menuToggle = document.querySelector('.menu-toggle');
 
-document.querySelector('#blowBtn').addEventListener('click', () => {
-  document.querySelector('.candles').classList.add('off');
-  document.querySelector('#cakeMessage').textContent = 'Wish made! May all your dreams come true. ❤️';
-  document.querySelector('#blowBtn').textContent = '✨ Wish sent!';
+menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('open');
 });
 
-document.querySelector('#openLetter').addEventListener('click', () => {
-  document.querySelector('#letterPaper').classList.toggle('show');
-  document.querySelector('#openLetter').textContent =
-    document.querySelector('#letterPaper').classList.contains('show') ? '♡ Your letter is open ♡' : 'Tap to open your letter';
+nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('open');
+    });
 });
 
-const reasons = [
-  'You have the most adorable smile. 😍',
-  'You make even ordinary days feel special.',
-  'Your laugh is my favourite sound.',
-  'You are beautifully, wonderfully you.',
-  'Talking to you is my favourite part of the day.',
-  'You make me want to become a better person.',
-  'There is always something new to adore about you.',
-  'Because life feels sweeter with you in it. 🌻'
-];
-let reasonIndex = 0;
-function showReason() {
-  document.querySelector('#reasonNumber').textContent = `Reason #${reasonIndex + 1}`;
-  document.querySelector('#reasonText').textContent = reasons[reasonIndex];
-}
-document.querySelector('#nextReason').addEventListener('click', () => { reasonIndex = (reasonIndex + 1) % reasons.length; showReason(); });
-document.querySelector('#prevReason').addEventListener('click', () => { reasonIndex = (reasonIndex - 1 + reasons.length) % reasons.length; showReason(); });
 
-document.querySelector('#openGift').addEventListener('click', () => {
-  const box = document.querySelector('#openGift');
-  box.classList.toggle('open');
-  document.querySelector('#giftMessage').textContent = box.classList.contains('open')
-    ? 'Surprise! My biggest gift is getting to know you. I love you! 💗'
-    : 'Open your gift 🎁';
+// Birthday Cake - Blow Candles
+const blowBtn = document.querySelector('#blowBtn');
+
+blowBtn.addEventListener('click', () => {
+    document.querySelector('.candles').classList.add('off');
+
+    document.querySelector('#cakeMessage').textContent =
+        'Wish made! May all your dreams come true. ❤️';
+
+    blowBtn.textContent = '✨ Wish sent to your Santa 😚!';
+});
+
+
+// Open Love Letter
+const openLetter = document.querySelector('#openLetter');
+const letterPaper = document.querySelector('#letterPaper');
+
+openLetter.addEventListener('click', () => {
+    letterPaper.classList.toggle('show');
+
+    openLetter.textContent = letterPaper.classList.contains('show')
+        ? '♡ Your letter is open ♡'
+        : 'Tap to open your letter';
+});
+
+
+// Gift Box Surprise
+const giftBox = document.querySelector('#openGift');
+const giftMessage = document.querySelector('#giftMessage');
+
+giftBox.addEventListener('click', () => {
+    giftBox.classList.toggle('open');
+
+    if (giftBox.classList.contains('open')) {
+        giftMessage.textContent =
+            'Surprise! My biggest gift is getting to know you. I love you! 💗';
+    } else {
+        giftMessage.textContent = 'Open your gift 🎁';
+    }
 });
